@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ScoutingCSV Quick Start Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container">
+        <button id="home-btn" class="btn">← Back To Home</button>
+        <h1>ScoutingAppRebuilt Quick Start Guide</h1>
+        <nav>
+            <!-- Navigation Terminal - Coming Soon -->
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="installation" class="card" style="margin-bottom: 2rem;">
+            <h2>Installation Guide</h2>
+            <p>ScoutingAppRebuilt is only available to Android Devices that run 5.0 or higher. You will also need ADB installed on your system for the installation and usage of this app.</p>
+            <p>To get started, go to the releases page and download the latest APK:</p>
+            <pre style="background: var(--border); padding: 1rem; border-radius: 8px; margin: 10px 0;">https://github.com/GenshinAddict416/ScoutingAppRebuilt/releases</pre>
+            <button id="download-btn" class="btn">Download Latest Release</button>
+            <p><br>Plug in your android device using its charging cable. Ensure developer options are enabled. Approve your computer on the popup on the screen of the device.</p>
+            <p>You can install the APK using ADB with the following command on the computer with the APK downloaded:</p>
+            <pre style="background: var(--border); padding: 1rem; border-radius: 8px; margin: 10px 0;">adb install path/to/ScoutingAppRebuilt.apk</pre>
+            <p>After installation, you can open the app on your device and start using it for scouting!</p>
+        </section>
+
+        <section id='start' class="card" style="margin-bottom: 2rem;">
+            <h2>Getting Started</h2>
+            <p>Open the app on your android device.</p>
+            <p>Then, open the ScoutingAppRebuilt Hub.</p>
+            <p>Next, go to the "Settings" menu and input your First API Key.</p>
+            <p>Then, generate the QR codes for your event.</p>
+            <p>Scan the QR codes with the android app and you should be ready to start scouting!</p>
+        </section>
+
+        </main>
+    
+</body>
+<script>
+    const homeBtn = document.getElementById('home-btn');
+    homeBtn.addEventListener('click', function() {
+        // This changes the current page address instead of opening a new one
+        window.location.href = 'index.html'; 
+    });
+</script>
+</html>
