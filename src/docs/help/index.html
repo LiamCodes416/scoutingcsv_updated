@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ScoutingAppRebuilt Help Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="container">
+        <button id="home-btn" class="btn">← Back To Home</button>
+        <h1>ScoutingAppRebuilt Help Guide</h1>
+        <p>This is a mixed salad of all the issues and questions that have been reported/asked by users.</p>
+        <p>If you have any questions or issues, please feel free to ask at lrmccormick416@gmail.com.</p>
+    </header>
+
+    <main class="container">
+        <section class="card" style="margin-bottom: 2rem;">
+            <h2>FIRST API Key</h2>
+            <p>If you don't have a FIRST API Key, you can obtain one from the FIRST website.</p>
+            <ol>
+                <li>Go to the link <a href="https://frc-events.firstinspires.org/services/api/register" target="_blank">here</a>.</li>
+                <li>Fill out the form with your information.</li>
+                <li>After submitting the form, you should receive an email with your API key.</li>
+                <li>Copy the username and API key, and paste it into the "Settings" menu of the ScoutingAppRebuilt Hub.</li>
+                
+            </ol>
+            <p>Once you input the username and key and have hit the save settings button, the app will remember the username and key, as long as you are on the same device.</p>
+        </section>
+    </main>
+    <script>
+        const homeBtn = document.getElementById('home-btn');
+        homeBtn.addEventListener('click', function() {
+            // This changes the current page address instead of opening a new one
+            window.location.href = '../index.html'; 
+        });
+    </script>
+</body>

@@ -108,3 +108,14 @@ nav ul {
   display: flex;
   gap: 1.5rem;
 }
+
+ol {
+  padding-left: 1.5rem;      /* Gives room for the list numbers */
+  margin-top: 1rem;          /* Adds breathing room above the list */
+  margin-bottom: 1rem;       /* Adds breathing room below the list */
+}
+
+ol li {
+  margin-bottom: 0.5rem;     /* Adds a small gap between each step */
+  padding-left: 0.25rem;     /* Optional: slightly separates numbers from the text */
+}
