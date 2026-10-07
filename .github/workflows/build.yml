@@ -1,0 +1,38 @@
+name: Compile Python App to EXE
+
+on:
+  push:
+    branches: [ "main" ]  # Triggers the build whenever you push to main
+  workflow_dispatch:      # Allows you to trigger the build manually via GitHub UI
+
+jobs:
+  build:
+    runs-on: windows-2022  # Runs on a clean Windows machine in the cloud
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        cache: 'pip' # Speeds up subsequent workflow runs
+
+    - name: Install Project Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Install Nuitka and your specific project dependencies
+        pip install nuitka zstandard customtkinter requests qrcode pillow
+
+    - name: Compile Executable with Nuitka
+      run: |
+        python -m pip install ziglang
+        python -m nuitka --standalone --onefile --plugin-enable=tk-inter --include-data-dir=src=src --windows-console-mode=disable --windows-icon-from-ico=src/icon.ico main.py
+
+    - name: Upload Compiled EXE Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ScoutingAppHub-Windows
+        path: main.exe  # Grabs your compiled binary
+        if-no-files-found: error
