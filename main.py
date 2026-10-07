@@ -73,8 +73,7 @@ class App(ctk.CTk):
         self.qr_status_label = ctk.CTkLabel(master=tabview.tab("QR Code Schedules"), text="", font=ctk.CTkFont(size=12))
         self.qr_status_label.grid(column=0, row=6, padx=20, pady=10)
 
-        self.go_button = ctk.CTkButton(master=tabview.tab("QR Code Schedules"), text="Generate QRs", 
-                                  command=self.start_qr_generation_thread)
+        self.go_button = ctk.CTkButton(master=tabview.tab("QR Code Schedules"), text="Generate QRs", command=self.start_qr_generation_thread)
         self.go_button.grid(column=0, row=8, padx=20, pady=20)
 
         # --- Pull Data Tab ---
